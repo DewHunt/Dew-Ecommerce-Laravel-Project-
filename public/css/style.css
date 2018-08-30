@@ -1,0 +1,30 @@
+/**
+* Override css
+*/
+.bg-light {
+	background-color: #6bc007!important;
+}
+
+
+html, body {
+	background-color: #fff;
+	color: #636b6f;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 200;
+	height: 100vh;
+	margin: 0;
+}
+
+.margin-top-20{
+	margin-top: 20px;
+}
+
+.feature-img{
+	max-height: 200px;
+}
+
+.footer-bottom{
+	padding: 20px;
+	margin-top: 20px;
+	background: #6fbecc!important;
+}
