@@ -10,32 +10,55 @@
 							Add Products to Database
 						</div>
 						<div class="card-body">
-							<form>
+							<form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
+								{{ csrf_field() }}
 								<div class="form-group row">
 									<label for="inputProductTitle" class="col-sm-2 col-form-label">Product Title</label>
 									<div class="col-sm-10">
-										<input type="text" class="form-control" id="inputProductTitle" placeholder="Product Title">
+										<input type="text" name="inputProductTitle" class="form-control" id="inputProductTitle" placeholder="Product Title">
 									</div>
 								</div>
 
 								<div class="form-group row">
-									<label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
+									<label for="inputProductDescription" class="col-sm-2 col-form-label">Description</label>
 									<div class="col-sm-10">
-										<textarea name="description" rows="8" cols="80" class="form-control"></textarea>
+										<textarea name="inputProductDescription" rows="8" cols="80" class="form-control"></textarea>
 									</div>
 								</div>
 
 								<div class="form-group row">
-									<label for="inputPrice" class="col-sm-2 col-form-label">Price</label>
+									<label for="inputProductPrice" class="col-sm-2 col-form-label">Price</label>
 									<div class="col-sm-10">
-										<input type="number" class="form-control" id="inputPrice" placeholder="Price">
+										<input type="number" name="inputProductPrice" class="form-control" id="inputProductPrice" placeholder="Price">
 									</div>
 								</div>
 
 								<div class="form-group row">
-									<label for="inputQuantity" class="col-sm-2 col-form-label">Quantity</label>
+									<label for="inputProductQuantity" class="col-sm-2 col-form-label">Quantity</label>
 									<div class="col-sm-10">
-										<input type="number" class="form-control" id="inputQuantity" placeholder="Quantity">
+										<input type="number" name="inputProductQuantity" class="form-control" id="inputProductQuantity" placeholder="Quantity">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="inputProductImage" class="col-sm-2 col-form-label">Product Image</label>
+
+									<div class="row">
+										<div class="col-sm-3">
+											<input type="file" name="inputProductImage[]" class="form-control" id="inputProductImage">
+										</div>
+										<div class="col-sm-3">
+											<input type="file" name="inputProductImage[]" class="form-control" id="inputProductImage">
+										</div>
+										<div class="col-sm-3">
+											<input type="file" name="inputProductImage[]" class="form-control" id="inputProductImage">
+										</div>
+										<div class="col-sm-3">
+											<input type="file" name="inputProductImage[]" class="form-control" id="inputProductImage">
+										</div>
+										<div class="col-sm-3">
+											<input type="file" name="inputProductImage[]" class="form-control" id="inputProductImage">
+										</div>
 									</div>
 								</div>
 						</div>

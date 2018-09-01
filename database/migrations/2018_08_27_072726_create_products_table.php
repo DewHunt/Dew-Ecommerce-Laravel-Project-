@@ -23,8 +23,8 @@ class CreateProductsTable extends Migration
             $table->integer('quantity')->default(1);
             $table->integer('price');
             $table->tinyInteger('status')->default(0);
-            $table->integer('offer_price')->nullable;
-            $table->integer('admin_id')->unsigned;
+            $table->integer('offer_price')->nullable();
+            $table->integer('admin_id')->unsigned();
             $table->timestamps();
         });
     }
